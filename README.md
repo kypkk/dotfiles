@@ -7,7 +7,7 @@ These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
 
 | Tools             | Description                                                                                         |
 | ----------------- | --------------------------------------------------------------------------------------------------- |
-| Terminal emulator | [Windows Terminal](https://github.com/microsoft/terminal) (on WSL2) & [iTerm2](https://iterm2.com/) |
+| Terminal emulator | [iTerm2](https://iterm2.com/) |
 | Package manager   | [Homebrew](https://brew.sh/)                                                                        |
 | Unix shell        | [Z shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)                                   |
 | Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                                           |
