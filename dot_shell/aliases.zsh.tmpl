@@ -162,7 +162,7 @@ command -v docker > /dev/null && {
   alias di='docker inspect'
   alias dvl='docker volume ls'
   alias dvi='docker volume inspect'
-  alias dvp='docker volume inspect --format ''{{ .Mountpoint }}'''
+  alias dvp='docker volume inspect --format ''{{"{{"}} .Mountpoint {{"}}"}}'''
   
   # compose
   alias dc='docker-compose'
