@@ -132,6 +132,7 @@
   svnr = svn rebase
   svnd = svn dcommit
   svnl = svn log --oneline --show-commit
+	tree = log --oneline --decorate --all --graph
 
 # Colors
 [color]
@@ -144,9 +145,9 @@
   newHighlight = white bold 22
 
 [color "diff"]
-  meta = black
+  meta = white
   frag = blue bold
-  commit = black bold
+  commit = white bold
   old = red bold
   new = green bold
   whitespace = red reverse
