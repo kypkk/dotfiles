@@ -1,9 +1,6 @@
 #!/bin/bash
-set x
-
-cd ~
+set -x
+# rm Brewfile Brewfile.lock.json
 brew bundle dump --describe --force
-chezmoi cd
-chezmoi add --template ~/Brewfile
-git add Brewfile.tmp
-git commit -m "Updated Brewfile"
+git add Brewfile
+git commit -m "chore: update Brewfile"
