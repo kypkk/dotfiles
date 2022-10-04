@@ -424,6 +424,8 @@ cask "cheatsheet"
 cask "cloudflare-warp"
 # Trains AIs to understand and translate texts
 cask "deepl"
+# Voice and text chat software
+cask "discord"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Reimagine your terminal
@@ -447,3 +449,18 @@ cask "mono-mdk-for-visual-studio"
 cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code"
+mas "AdBlock", id: 1402042596
+mas "Grammarly for Safari", id: 1462114288
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Playgrounds", id: 1496833156
+mas "The Unarchiver", id: 425424353
+mas "WeChat", id: 836500024
+mas "Xcode", id: 497799835
+mas "Xmind", id: 1327661892
