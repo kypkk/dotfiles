@@ -506,6 +506,8 @@ cask "cloudflare-warp"
 cask "deepl"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerized applications and microservices
+cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
 # Reimagine your terminal
