@@ -18,6 +18,7 @@ tap "joedrago/repo"
 tap "louisbrunner/valgrind"
 tap "mongodb/brew"
 tap "ngrok/ngrok"
+tap "samtay/tui"
 tap "teamookla/speedtest"
 # Search tool like grep, but optimized for programmers
 brew "ack"
@@ -35,14 +36,16 @@ brew "pango"
 brew "librsvg"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
+# Color management engine supporting ICC profiles
+brew "little-cms2"
 # New file format for still image compression
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10", link: false
 # Record and share terminal sessions
 brew "asciinema"
+# Aquarium animation in ASCII art
+brew "asciiquarium"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -67,8 +70,6 @@ brew "binutils"
 brew "gcc"
 # Library for complex text layout
 brew "libraqm"
-# Color management engine supporting ICC profiles
-brew "little-cms2"
 # Package for scientific computing with Python
 brew "numpy"
 # Tool Command Language
@@ -85,22 +86,32 @@ brew "blueutil"
 brew "caddy", restart_service: true
 # Decentralized dependency manager for Cocoa
 brew "carthage"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# International domain name library (IDNA2008, Punycode and TR46)
+brew "libidn2"
+# Library to load and enumerate PKCS#11 modules
+brew "p11-kit"
+# Validating, recursive, caching DNS resolver
+brew "unbound", restart_service: true
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Emacs dependency management
+brew "cask"
 # Manage your dotfiles across multiple diverse machines, securely
 brew "chezmoi"
 # Ruby environment tool
 brew "chruby"
 # Work on automating classical cipher cracking in C
 brew "cifer"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
+# Console Matrix
+brew "cmatrix"
 # Configurable talking characters in ASCII art
 brew "cowsay"
 # Shell script to build fancy DMGs
 brew "create-dmg"
 # Reimplementation of ctags(1)
 brew "ctags"
-# International domain name library (IDNA2008, Punycode and TR46)
-brew "libidn2"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Tools to work with Android .dex and Java .class files
@@ -109,6 +120,8 @@ brew "dex2jar"
 brew "diff-so-fancy"
 # TCP over DNS tunnel
 brew "dns2tcp"
+# Pack, ship and run any application as a lightweight container
+brew "docker", link: false
 # Tool for managing dock items
 brew "dockutil"
 # Run arbitrary commands when files change
@@ -121,14 +134,6 @@ brew "exa"
 brew "fasd"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Generic library support script
-brew "libtool"
-# Library to load and enumerate PKCS#11 modules
-brew "p11-kit"
-# Validating, recursive, caching DNS resolver
-brew "unbound", restart_service: true
-# GNU Transport Layer Security (TLS) Library
-brew "gnutls"
 # Multi-format archive and compression library
 brew "libarchive"
 # Subtitle renderer for the ASS/SSA subtitle format
@@ -145,6 +150,8 @@ brew "flarectl"
 brew "flex"
 # Console program to recover files based on their headers and footers
 brew "foremost"
+# Generic library support script
+brew "libtool"
 # Libraries to talk to Microsoft SQL Server and Sybase databases
 brew "freetds"
 # Frame Streams implementation in C
@@ -163,6 +170,8 @@ brew "git", link: false
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
 # Network related modules for glib
 brew "glib-networking"
 # Generate introspection data for GObject libraries
@@ -273,8 +282,6 @@ brew "ldns"
 brew "libimobiledevice"
 # Library and utility to talk to iBoot/iBSS via USB
 brew "libirecovery"
-# Postgres C API library
-brew "libpq"
 # Library that provides automatic proxy configuration management
 brew "libproxy"
 # YAML Parser
@@ -423,6 +430,8 @@ brew "tig"
 brew "tldr", link: false
 # Terminal multiplexer
 brew "tmux"
+# Color-based alternative to figlet (uses libcaca)
+brew "toilet"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Tools for building TCP client-server applications
@@ -483,6 +492,8 @@ brew "hashicorp/tap/nomad"
 brew "heroku/brew/heroku"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+# Tetris in your terminal
+brew "samtay/tui/tetris"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
 # Transfer files from and to an Android smartphone
@@ -523,3 +534,20 @@ cask "ngrok"
 cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code"
+# Simple menu bar app to download YouTube movies
+cask "youtube-downloader"
+mas "AdBlock", id: 1402042596
+mas "Grammarly for Safari", id: 1462114288
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Playgrounds", id: 1496833156
+mas "The Unarchiver", id: 425424353
+mas "WeChat", id: 836500024
+mas "Xcode", id: 497799835
+mas "Xmind", id: 1327661892
