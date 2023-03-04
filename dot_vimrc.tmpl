@@ -1,3 +1,19 @@
+" Kypkk's vimrc
+
+" Vundle
+set nocompatible              " be iMproved
+filetype off                  
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+call vundle#end()           
+filetype plugin indent on 
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -19,7 +35,7 @@ command W w !sudo tee % > /dev/null
 set wildmenu
 
 " Show line numbers
-:set number
+:set number relativenumber
 
 " Always show current position
 set ruler
@@ -193,7 +209,6 @@ filetype plugin indent on
 syntax enable
 
 " Dein Package Menager - End
-
 " autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endi
@@ -201,3 +216,5 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 map <C-t> :NERDTreeToggle<CR>
 
 set directory^=$HOME/.vim/tmp//
+Plugin 'wakatime/vim-wakatime'
+
