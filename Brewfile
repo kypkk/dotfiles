@@ -73,7 +73,7 @@ brew "libraqm"
 # Package for scientific computing with Python
 brew "numpy"
 # Tool Command Language
-brew "tcl-tk"
+brew "tcl-tk", link: false
 # Friendly PIL fork (Python Imaging Library)
 brew "pillow"
 # Searches a binary image for embedded files and executable code
@@ -174,38 +174,6 @@ brew "git-lfs"
 brew "guile"
 # Network related modules for glib
 brew "glib-networking"
-# Generate introspection data for GObject libraries
-brew "gobject-introspection"
-# Library for manipulating JPEG-2000 images
-brew "jasper"
-# Image manipulation
-brew "netpbm"
-# Graph visualization software from AT&T and Bell Labs
-brew "graphviz"
-# Compiler for the GObject type system
-brew "vala"
-# Flexible API to implement spellchecking in GTK+ applications
-brew "gspell"
-# Text view with syntax, undo/redo, and text marks
-brew "gtksourceview4"
-# Collection library providing GObject-based interfaces
-brew "libgee"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
-# Glib wrapper library around libgit2 git access library
-brew "libgit2-glib"
-# Python 3 bindings for the Cairo graphics library
-brew "py3cairo"
-# GNOME Python bindings (based on GObject Introspection)
-brew "pygobject3"
-# GObject plugin library
-brew "libpeas"
-# C library for the Public Suffix List
-brew "libpsl"
-# HTTP client/server library for GNOME
-brew "libsoup@2"
-# GNOME GUI client to view git repositories
-brew "gitg"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # GNU version of the tar archiving utility
@@ -216,12 +184,26 @@ brew "pinentry"
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Generate introspection data for GObject libraries
+brew "gobject-introspection"
+# Library for manipulating JPEG-2000 images
+brew "jasper"
+# Image manipulation
+brew "netpbm"
 # Optical Character Recognition (OCR), converts images back to text
 brew "gocr"
 # Terminal based graphical activity monitor inspired by gtop and vtop
 brew "gotop"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Compiler for the GObject type system
+brew "vala"
+# Flexible API to implement spellchecking in GTK+ applications
+brew "gspell"
+# Text view with syntax, undo/redo, and text marks
+brew "gtksourceview4"
 # Tool to exploit hash length extension attack
 brew "hashpump"
 # Kubernetes package manager
@@ -278,12 +260,28 @@ brew "kubectx"
 brew "kustomize"
 # DNS library written in C
 brew "ldns"
+# Collection library providing GObject-based interfaces
+brew "libgee"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
+# Glib wrapper library around libgit2 git access library
+brew "libgit2-glib"
 # Library to communicate with iOS devices natively
 brew "libimobiledevice"
 # Library and utility to talk to iBoot/iBSS via USB
 brew "libirecovery"
+# Python 3 bindings for the Cairo graphics library
+brew "py3cairo"
+# GNOME Python bindings (based on GObject Introspection)
+brew "pygobject3"
+# GObject plugin library
+brew "libpeas"
 # Library that provides automatic proxy configuration management
 brew "libproxy"
+# C library for the Public Suffix List
+brew "libpsl"
+# HTTP client/server library for GNOME
+brew "libsoup@2"
 # YAML Parser
 brew "libyaml"
 # Emulator for x86 and PowerPC
@@ -323,7 +321,7 @@ brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # NCurses Disk Usage
 brew "ncdu"
 # FTP client with an advanced user interface
@@ -498,6 +496,8 @@ brew "samtay/tui/tetris"
 brew "teamookla/speedtest/speedtest"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer"
+# Data management tool that enables working with SQL Server
+cask "azure-data-studio"
 # Tool to list all active shortcuts of the current application
 cask "cheatsheet"
 # Free app that makes your Internet safer
@@ -532,6 +532,8 @@ cask "microsoft-edge"
 cask "mono-mdk-for-visual-studio"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Graphical client for Git version control
+cask "sourcetree"
 # Integrated development environment
 cask "visual-studio"
 # Open-source code editor
