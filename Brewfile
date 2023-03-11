@@ -321,7 +321,7 @@ brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 # NCurses Disk Usage
 brew "ncdu"
 # FTP client with an advanced user interface
@@ -532,6 +532,8 @@ cask "microsoft-edge"
 cask "mono-mdk-for-visual-studio"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Graphical client for Git version control
 cask "sourcetree"
 # Integrated development environment
