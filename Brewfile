@@ -321,7 +321,7 @@ brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Open source relational database management system
-brew "mysql", restart_service: true
+brew "mysql"
 # NCurses Disk Usage
 brew "ncdu"
 # FTP client with an advanced user interface
