@@ -20,6 +20,7 @@ tap "mongodb/brew"
 tap "ngrok/ngrok"
 tap "samtay/tui"
 tap "teamookla/speedtest"
+tap "yudai/gotty"
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Core application library for C
@@ -52,6 +53,8 @@ brew "autoconf"
 brew "automake"
 # Automatically restart SSH sessions and tunnels
 brew "autossh"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11", link: false
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Microsoft Azure CLI 2.0
@@ -70,10 +73,10 @@ brew "binutils"
 brew "gcc"
 # Library for complex text layout
 brew "libraqm"
+# Optimized BLAS library
+brew "openblas"
 # Package for scientific computing with Python
 brew "numpy"
-# Tool Command Language
-brew "tcl-tk", link: false
 # Friendly PIL fork (Python Imaging Library)
 brew "pillow"
 # Searches a binary image for embedded files and executable code
@@ -124,8 +127,14 @@ brew "dns2tcp"
 brew "docker", link: false
 # Tool for managing dock items
 brew "dockutil"
+# Spellchecker wrapping library
+brew "enchant"
 # Run arbitrary commands when files change
 brew "entr"
+# GSettings schemas for desktop components
+brew "gsettings-desktop-schemas"
+# Toolkit for creating graphical user interfaces
+brew "gtk+3", link: false
 # Multipurpose sniffer/interceptor/logger for switched LAN
 brew "ettercap"
 # Modern replacement for 'ls'
@@ -170,8 +179,8 @@ brew "git", link: false
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
-# GNU Ubiquitous Intelligent Language for Extensions
-brew "guile"
+# Audit git repos for secrets
+brew "gitleaks"
 # Network related modules for glib
 brew "glib-networking"
 # GNU implementation of the famous stream editor
@@ -194,16 +203,20 @@ brew "netpbm"
 brew "gocr"
 # Terminal based graphical activity monitor inspired by gtop and vtop
 brew "gotop"
+# Open-source build automation tool based on the Groovy and Kotlin DSL
+brew "gradle"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU grep, egrep and fgrep
 brew "grep"
-# Compiler for the GObject type system
-brew "vala"
+# GUI toolkit
+brew "gtk+"
 # Flexible API to implement spellchecking in GTK+ applications
 brew "gspell"
 # Text view with syntax, undo/redo, and text marks
 brew "gtksourceview4"
+# GNU Ubiquitous Intelligent Language for Extensions
+brew "guile"
 # Tool to exploit hash length extension attack
 brew "hashpump"
 # Kubernetes package manager
@@ -238,6 +251,8 @@ brew "libheif"
 brew "libraw"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# Image loading and rendering library
+brew "imlib2"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
 brew "iperf3"
 # CLI wrapper for basic network utilities on macOS - ip command
@@ -302,8 +317,6 @@ brew "lux"
 brew "lynx"
 # Swiss Army Knife for macOS
 brew "m-cli"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # GUI for vim, made for macOS
 brew "macvim"
 # Securely transfers data between computers
@@ -434,6 +447,8 @@ brew "toilet"
 brew "tree"
 # Tools for building TCP client-server applications
 brew "ucspi-tcp"
+# Compiler for the GObject type system
+brew "vala"
 # Visual Binary Diff
 brew "vbindiff"
 # Disaster recovery for Kubernetes resources and persistent volumes
@@ -496,6 +511,8 @@ brew "samtay/tui/tetris"
 brew "teamookla/speedtest/speedtest"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer"
+# Chromium based browser
+cask "arc"
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
 # Tool to list all active shortcuts of the current application
@@ -536,24 +553,11 @@ cask "ngrok"
 cask "raycast"
 # Graphical client for Git version control
 cask "sourcetree"
+# Charting and social-networking for investment traders
+cask "tradingview"
 # Integrated development environment
 cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code"
 # Simple menu bar app to download YouTube movies
 cask "youtube-downloader"
-mas "AdBlock", id: 1402042596
-mas "Grammarly for Safari", id: 1462114288
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Messenger", id: 1480068668
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Playgrounds", id: 1496833156
-mas "The Unarchiver", id: 425424353
-mas "WeChat", id: 836500024
-mas "Xcode", id: 497799835
-mas "Xmind", id: 1327661892
