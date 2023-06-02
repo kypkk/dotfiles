@@ -515,8 +515,6 @@ cask "android-file-transfer"
 cask "arc"
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
-# Tool to list all active shortcuts of the current application
-cask "cheatsheet"
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
 # Trains AIs to understand and translate texts
@@ -551,6 +549,8 @@ cask "mono-mdk-for-visual-studio"
 cask "ngrok"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Emoji picker optimized for blind people
+cask "rocket"
 # Graphical client for Git version control
 cask "sourcetree"
 # Charting and social-networking for investment traders
@@ -561,3 +561,88 @@ cask "visual-studio"
 cask "visual-studio-code"
 # Simple menu bar app to download YouTube movies
 cask "youtube-downloader"
+mas "AdBlock", id: 1402042596
+mas "Grammarly for Safari", id: 1462114288
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "NotePlan", id: 1505432629
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Playgrounds", id: 1496833156
+mas "The Unarchiver", id: 425424353
+mas "WeChat", id: 836500024
+mas "Xcode", id: 497799835
+mas "Xmind", id: 1327661892
+vscode "aaron-bond.better-comments"
+vscode "adpyke.codesnap"
+vscode "azemoh.one-monokai"
+vscode "bradlc.vscode-tailwindcss"
+vscode "cschlosser.doxdocgen"
+vscode "DavidAnson.vscode-markdownlint"
+vscode "dcasella.monokai-plusplus"
+vscode "DigitalBrainstem.javascript-ejs-support"
+vscode "dzhavat.bracket-pair-toggler"
+vscode "esbenp.prettier-vscode"
+vscode "formulahendry.auto-rename-tag"
+vscode "formulahendry.code-runner"
+vscode "GitHub.copilot"
+vscode "gitpod.gitpod-desktop"
+vscode "jeff-hykin.better-cpp-syntax"
+vscode "josetr.cmake-language-support-vscode"
+vscode "kleber-swf.unity-code-snippets"
+vscode "luniclynx.bison"
+vscode "luniclynx.lex"
+vscode "mhutchie.git-graph"
+vscode "monokai.theme-monokai-pro-vscode"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.csharp"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-python.autopep8"
+vscode "ms-python.isort"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "ms-toolsai.jupyter"
+vscode "ms-toolsai.jupyter-keymap"
+vscode "ms-toolsai.jupyter-renderers"
+vscode "ms-toolsai.vscode-jupyter-cell-tags"
+vscode "ms-toolsai.vscode-jupyter-slideshow"
+vscode "ms-vscode-remote.remote-containers"
+vscode "ms-vscode-remote.remote-ssh"
+vscode "ms-vscode-remote.remote-ssh-edit"
+vscode "ms-vscode-remote.remote-wsl"
+vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpptools"
+vscode "ms-vscode.cpptools-extension-pack"
+vscode "ms-vscode.cpptools-themes"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vsliveshare.vsliveshare"
+vscode "ms-vsliveshare.vsliveshare-audio"
+vscode "ms-vsliveshare.vsliveshare-pack"
+vscode "PKief.material-icon-theme"
+vscode "platformio.platformio-ide"
+vscode "redhat.java"
+vscode "ritwickdey.live-sass"
+vscode "ritwickdey.LiveServer"
+vscode "rodrigovallades.es7-react-js-snippets"
+vscode "TabNine.tabnine-vscode"
+vscode "Tobiah.unity-tools"
+vscode "tomoki1207.pdf"
+vscode "twxs.cmake"
+vscode "Unity.unity-debug"
+vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
+vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
+vscode "vscode-icons-team.vscode-icons"
+vscode "WakaTime.vscode-wakatime"
+vscode "wayou.vscode-todo-highlight"
+vscode "withfig.fig"
+vscode "YclepticStudios.unity-snippets"
+vscode "zhuangtongfa.material-theme"
