@@ -1,0 +1,55 @@
+unbind r
+bind r source-file ~/.tmux.conf
+
+set -g prefix C-s
+
+# enable mouse support
+set -g mouse on
+
+# Start windows and panes index at 1, not 0.
+set -g base-index 1
+setw -g pane-base-index 1
+
+# Ensure window index numbers get reordered on delete.
+set-option -g renumber-windows on
+
+################################
+#######   act like vim  ########
+################################
+
+setw -g mode-keys vi
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+
+################################
+####### List of Plugins ########
+################################
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'dracula/tmux'
+
+set -g @dracula-plugins "time battery weather"
+set -g @dracula-show-powerline true
+set -g @dracula-show-flags true
+set -g @dracula-show-fahrenheit false
+set -g @dracula-fixed-location "hsinchu TW"
+set -g @dracula-show-left-icon session
+set -g @dracula-border-contrast true
+set -g @dracula-battery-label "Battery"
+set -g @dracula-show-timezone true
+set -g @dracula-show-left-icon session
+
+set -g status-position top
+
+################################
+######## Split in CWD  #########
+################################
+bind '"' split-window -v -c "#{pane_current_path}"
+
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
