@@ -25,6 +25,10 @@ tap "yudai/gotty"
 brew "ack"
 # Core application library for C
 brew "glib"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9", link: false
 # Toolkit for image loading and pixel buffer manipulation
@@ -39,12 +43,18 @@ brew "librsvg"
 brew "adwaita-icon-theme"
 # Color management engine supporting ICC profiles
 brew "little-cms2"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # New file format for still image compression
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Companion library to apr, the Apache Portable Runtime library
+brew "apr-util"
 # Record and share terminal sessions
 brew "asciinema"
+# High performance key/value database
+brew "berkeley-db"
 # Aquarium animation in ASCII art
 brew "asciiquarium"
 # Automatic configure script builder
@@ -53,10 +63,12 @@ brew "autoconf"
 brew "automake"
 # Automatically restart SSH sessions and tunnels
 brew "autossh"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11", link: false
+# Text processing system for reStructuredText
+brew "docutils"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Microsoft Azure CLI 2.0
 brew "azure-cli"
 # B2 Cloud Storage Command-Line Tools
@@ -91,6 +103,8 @@ brew "caddy", restart_service: true
 brew "carthage"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Asynchronous event library
+brew "libevent"
 # International domain name library (IDNA2008, Punycode and TR46)
 brew "libidn2"
 # Library to load and enumerate PKCS#11 modules
@@ -99,6 +113,8 @@ brew "p11-kit"
 brew "unbound", restart_service: true
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# GNU Emacs text editor
+brew "emacs"
 # Emacs dependency management
 brew "cask"
 # Manage your dotfiles across multiple diverse machines, securely
@@ -115,6 +131,10 @@ brew "cowsay"
 brew "create-dmg"
 # Reimplementation of ctags(1)
 brew "ctags"
+# C library implementing the SSH2 protocol
+brew "libssh2"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
 # Tools to work with Android .dex and Java .class files
@@ -134,7 +154,7 @@ brew "entr"
 # GSettings schemas for desktop components
 brew "gsettings-desktop-schemas"
 # Toolkit for creating graphical user interfaces
-brew "gtk+3", link: false
+brew "gtk+3"
 # Multipurpose sniffer/interceptor/logger for switched LAN
 brew "ettercap"
 # Modern replacement for 'ls'
@@ -143,14 +163,14 @@ brew "exa"
 brew "fasd"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Multi-format archive and compression library
-brew "libarchive"
 # Subtitle renderer for the ASS/SSA subtitle format
 brew "libass"
 # Blu-Ray disc playback library for media players like VLC
 brew "libbluray"
 # Secure Reliable Transport
 brew "srt"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # CLI application for interacting with a Cloudflare account
@@ -187,6 +207,12 @@ brew "glib-networking"
 brew "gnu-sed"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
+# Assuan IPC Library
+brew "libassuan"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
+# X.509 and CMS library
+brew "libksba"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
@@ -205,6 +231,8 @@ brew "gocr"
 brew "gotop"
 # Open-source build automation tool based on the Groovy and Kotlin DSL
 brew "gradle"
+# GNU triangulated surface library
+brew "gts"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # GNU grep, egrep and fgrep
@@ -241,8 +269,6 @@ brew "hunspell"
 brew "libfido2"
 # C library SSHv1/SSHv2 client and server protocols
 brew "libssh"
-# Open source relational database management system
-brew "mysql-client"
 # Network logon cracker which supports many services
 brew "hydra"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
@@ -259,20 +285,26 @@ brew "iperf3"
 brew "iproute2mac"
 # Serializes the output of command-line tools to structured JSON output
 brew "jc"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Extendable open source continuous integration server
+brew "jenkins-lts", restart_service: true
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Library for JSON, based on GLib
+brew "json-glib"
 # Port-knock server
 brew "knock"
 # Protocol buffers library
 brew "protobuf-c"
 # High-performance authoritative-only DNS server
 brew "knot", restart_service: true
-# Network authentication protocol
-brew "krb5"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Simple terminal UI for git commands
+brew "lazygit"
 # DNS library written in C
 brew "ldns"
 # Collection library providing GObject-based interfaces
@@ -291,6 +323,8 @@ brew "py3cairo"
 brew "pygobject3"
 # GObject plugin library
 brew "libpeas"
+# Postgres C API library
+brew "libpq"
 # Library that provides automatic proxy configuration management
 brew "libproxy"
 # C library for the Public Suffix List
@@ -299,10 +333,8 @@ brew "libpsl"
 brew "libsoup@2"
 # YAML Parser
 brew "libyaml"
-# Emulator for x86 and PowerPC
-brew "qemu"
-# Linux virtual machines
-brew "lima"
+# C library for reading, creating, and modifying zip archives
+brew "libzip"
 # Find your location using Apple's geolocation services
 brew "locateme"
 # Rainbows and unicorns in your console!
@@ -317,8 +349,12 @@ brew "lux"
 brew "lynx"
 # Swiss Army Knife for macOS
 brew "m-cli"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # GUI for vim, made for macOS
 brew "macvim"
+# Cryptographic recipes and primitives for Python
+brew "python-cryptography"
 # Securely transfers data between computers
 brew "magic-wormhole"
 # Mac App Store command-line interface
@@ -326,7 +362,7 @@ brew "mas"
 # Intercept, modify, replay, save HTTP/S traffic
 brew "mitmproxy"
 # Platform built on V8 to build network applications
-brew "node@16"
+brew "node", link: false
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Remote terminal application
@@ -334,13 +370,15 @@ brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # Open source relational database management system
-brew "mysql"
+brew "mysql", restart_service: true
 # NCurses Disk Usage
 brew "ncdu"
 # FTP client with an advanced user interface
 brew "ncftp"
 # Fast, highly customisable system info script
 brew "neofetch"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Small build system for use with gyp or CMake
@@ -348,9 +386,9 @@ brew "ninja"
 # Port scanning utility for large networks
 brew "nmap"
 # Platform built on V8 to build network applications
-brew "node", link: false
-# Platform built on V8 to build network applications
 brew "node@14"
+# Platform built on V8 to build network applications
+brew "node@16"
 # Trigger notifications when a process completes
 brew "noti"
 # Libraries for security-enabled client and server applications
@@ -383,6 +421,8 @@ brew "putty"
 brew "pv"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8", link: false
+# Emulator for x86 and PowerPC
+brew "qemu"
 # Cross-platform application and UI framework
 brew "qt"
 # Cross-platform application and UI framework
@@ -403,8 +443,12 @@ brew "ruby-install"
 brew "scons"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Easy and Repeatable Kubernetes Development
 brew "skaffold"
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
 # Monitors sleep, wakeup, and idleness of a Mac
 brew "sleepwatcher", restart_service: true
 # Terminal based presentation tool
@@ -445,6 +489,8 @@ brew "tmux"
 brew "toilet"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Digital clock in ncurses
+brew "tty-clock"
 # Tools for building TCP client-server applications
 brew "ucspi-tcp"
 # Compiler for the GObject type system
@@ -479,6 +525,8 @@ brew "ykman"
 brew "ykpers"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # Command-line tool for the YubiKey PIV application
 brew "yubico-piv-tool"
 # UNIX shell (command interpreter)
@@ -531,6 +579,8 @@ cask "fig"
 cask "font-fira-code"
 # Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
+# Developer targeted fonts with a high number of glyphs
+cask "font-jetbrains-mono-nerd-font"
 cask "font-menlo-for-powerline"
 cask "font-source-code-pro"
 # Free and open-source media player
@@ -555,28 +605,14 @@ cask "rocket"
 cask "sourcetree"
 # Charting and social-networking for investment traders
 cask "tradingview"
+# Configurable document editor that supports Markdown
+cask "typora"
 # Integrated development environment
 cask "visual-studio"
 # Open-source code editor
 cask "visual-studio-code"
 # Simple menu bar app to download YouTube movies
 cask "youtube-downloader"
-mas "AdBlock", id: 1402042596
-mas "Grammarly for Safari", id: 1462114288
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "LINE", id: 539883307
-mas "Messenger", id: 1480068668
-mas "Microsoft Outlook", id: 985367838
-mas "Microsoft Remote Desktop", id: 1295203466
-mas "NotePlan", id: 1505432629
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Playgrounds", id: 1496833156
-mas "The Unarchiver", id: 425424353
-mas "WeChat", id: 836500024
-mas "Xcode", id: 497799835
-mas "Xmind", id: 1327661892
 vscode "aaron-bond.better-comments"
 vscode "adpyke.codesnap"
 vscode "azemoh.one-monokai"
@@ -586,21 +622,25 @@ vscode "DavidAnson.vscode-markdownlint"
 vscode "dcasella.monokai-plusplus"
 vscode "DigitalBrainstem.javascript-ejs-support"
 vscode "dzhavat.bracket-pair-toggler"
+vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
 vscode "GitHub.copilot"
+vscode "GitHub.copilot-chat"
 vscode "gitpod.gitpod-desktop"
 vscode "jeff-hykin.better-cpp-syntax"
-vscode "josetr.cmake-language-support-vscode"
+vscode "jorgeserrano.vscode-csharp-snippets"
 vscode "kleber-swf.unity-code-snippets"
 vscode "luniclynx.bison"
 vscode "luniclynx.lex"
 vscode "mhutchie.git-graph"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-dotnettools.vscodeintellicode-csharp"
 vscode "ms-python.autopep8"
 vscode "ms-python.isort"
 vscode "ms-python.python"
@@ -614,7 +654,6 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode-remote.remote-wsl"
-vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
@@ -631,8 +670,6 @@ vscode "rodrigovallades.es7-react-js-snippets"
 vscode "TabNine.tabnine-vscode"
 vscode "Tobiah.unity-tools"
 vscode "tomoki1207.pdf"
-vscode "twxs.cmake"
-vscode "Unity.unity-debug"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "vscjava.vscode-java-debug"
@@ -645,4 +682,5 @@ vscode "WakaTime.vscode-wakatime"
 vscode "wayou.vscode-todo-highlight"
 vscode "withfig.fig"
 vscode "YclepticStudios.unity-snippets"
+vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
