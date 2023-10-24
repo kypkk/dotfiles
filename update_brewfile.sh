@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 set -x
 # rm Brewfile Brewfile.lock.json
 brew bundle dump --describe --force
