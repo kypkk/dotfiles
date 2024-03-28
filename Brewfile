@@ -1,6 +1,7 @@
 tap "adoptopenjdk/openjdk"
 tap "bramstein/webfonttools"
 tap "buo/cask-upgrade"
+tap "charmbracelet/tap"
 tap "cjbassi/ytop"
 tap "derailed/k9s"
 tap "dteoh/sqa"
@@ -19,18 +20,13 @@ tap "louisbrunner/valgrind"
 tap "mongodb/brew"
 tap "ngrok/ngrok"
 tap "samtay/tui"
+tap "sorenisanerd/gotty"
 tap "teamookla/speedtest"
 tap "yudai/gotty"
 # Search tool like grep, but optimized for programmers
 brew "ack"
 # Core application library for C
 brew "glib"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9", link: false
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
 # OpenType text shaping engine
@@ -49,14 +45,20 @@ brew "webp"
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Companion library to apr, the Apache Portable Runtime library
 brew "apr-util"
 # Record and share terminal sessions
 brew "asciinema"
 # High performance key/value database
 brew "berkeley-db"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Aquarium animation in ASCII art
 brew "asciiquarium"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.9", link: false
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
@@ -77,6 +79,8 @@ brew "b2-tools"
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Development kit for the Java programming language
+brew "openjdk"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
 # GNU binary tools for native development
@@ -85,10 +89,10 @@ brew "binutils"
 brew "gcc"
 # Library for complex text layout
 brew "libraqm"
-# Optimized BLAS library
-brew "openblas"
 # Package for scientific computing with Python
 brew "numpy"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
 # Friendly PIL fork (Python Imaging Library)
 brew "pillow"
 # Searches a binary image for embedded files and executable code
@@ -129,6 +133,8 @@ brew "cmatrix"
 brew "cowsay"
 # Shell script to build fancy DMGs
 brew "create-dmg"
+# Cryptographic recipes and primitives for Python
+brew "cryptography"
 # Reimplementation of ctags(1)
 brew "ctags"
 # C library implementing the SSH2 protocol
@@ -193,8 +199,6 @@ brew "gd"
 brew "gh"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
-# Distributed revision control system
-brew "git", link: false
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Git extension for versioning large files
@@ -271,6 +275,8 @@ brew "libfido2"
 brew "libssh"
 # Network logon cracker which supports many services
 brew "hydra"
+# Database of common MIME types
+brew "shared-mime-info"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
 # Library for reading RAW files from digital photo cameras
@@ -353,8 +359,6 @@ brew "m-cli"
 brew "ruby"
 # GUI for vim, made for macOS
 brew "macvim"
-# Cryptographic recipes and primitives for Python
-brew "python-cryptography"
 # Securely transfers data between computers
 brew "magic-wormhole"
 # Mac App Store command-line interface
@@ -421,7 +425,7 @@ brew "putty"
 brew "pv"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8", link: false
-# Emulator for x86 and PowerPC
+# Generic machine emulator and virtualizer
 brew "qemu"
 # Cross-platform application and UI framework
 brew "qt"
@@ -499,6 +503,8 @@ brew "vala"
 brew "vbindiff"
 # Disaster recovery for Kubernetes resources and persistent volumes
 brew "velero"
+# Command-line interface to the WakaTime api
+brew "wakatime-cli"
 # Sends magic packets to wake up network-devices
 brew "wakeonlan"
 # Internet file retriever
@@ -509,8 +515,6 @@ brew "whatmask"
 brew "wifi-password"
 # Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
-# Tools for the WireGuard secure network tunnel
-brew "wireguard-tools"
 # Utilities to create and convert Web Open Font File (WOFF) files
 brew "woff2"
 # PDF viewer
@@ -541,6 +545,8 @@ brew "zsh-syntax-highlighting"
 brew "bramstein/webfonttools/sfnt2woff"
 # WOFF utilities with Zopfli compression
 brew "bramstein/webfonttools/sfnt2woff-zopfli"
+# A tasty, self-hostable Git server for the command line🍦
+brew "charmbracelet/tap/soft-serve"
 # A TUI system monitor written in Rust
 brew "cjbassi/ytop/ytop"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -563,13 +569,15 @@ cask "android-file-transfer"
 cask "arc"
 # Data management tool that enables working with SQL Server
 cask "azure-data-studio"
+# Automated testing of webapps for Google Chrome
+cask "chromedriver", args: { appdir: "/webdriver/chromedriver" }
 # Free app that makes your Internet safer
 cask "cloudflare-warp"
 # Trains AIs to understand and translate texts
 cask "deepl"
 # Voice and text chat software
 cask "discord"
-# App to build and share containerized applications and microservices
+# App to build and share containerised applications and microservices
 cask "docker"
 # Client for the Dropbox cloud storage service
 cask "dropbox"
@@ -599,14 +607,14 @@ cask "mono-mdk-for-visual-studio"
 cask "ngrok"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Emoji picker optimized for blind people
+# Emoji picker optimised for blind people
 cask "rocket"
-# Graphical client for Git version control
-cask "sourcetree"
 # Charting and social-networking for investment traders
 cask "tradingview"
 # Configurable document editor that supports Markdown
 cask "typora"
+# Virtualiser for x86 hardware
+cask "virtualbox"
 # Integrated development environment
 cask "visual-studio"
 # Open-source code editor
@@ -618,22 +626,19 @@ vscode "adpyke.codesnap"
 vscode "azemoh.one-monokai"
 vscode "bradlc.vscode-tailwindcss"
 vscode "cschlosser.doxdocgen"
-vscode "DavidAnson.vscode-markdownlint"
+vscode "davidanson.vscode-markdownlint"
 vscode "dcasella.monokai-plusplus"
-vscode "DigitalBrainstem.javascript-ejs-support"
+vscode "digitalbrainstem.javascript-ejs-support"
 vscode "dzhavat.bracket-pair-toggler"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "formulahendry.auto-rename-tag"
 vscode "formulahendry.code-runner"
-vscode "GitHub.copilot"
-vscode "GitHub.copilot-chat"
 vscode "gitpod.gitpod-desktop"
+vscode "golang.go"
 vscode "jeff-hykin.better-cpp-syntax"
 vscode "jorgeserrano.vscode-csharp-snippets"
 vscode "kleber-swf.unity-code-snippets"
-vscode "luniclynx.bison"
-vscode "luniclynx.lex"
 vscode "mhutchie.git-graph"
 vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-azuretools.vscode-docker"
@@ -642,6 +647,7 @@ vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-dotnettools.vscodeintellicode-csharp"
 vscode "ms-python.autopep8"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
@@ -659,28 +665,27 @@ vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "ms-vsliveshare.vsliveshare-audio"
 vscode "ms-vsliveshare.vsliveshare-pack"
-vscode "PKief.material-icon-theme"
+vscode "pkief.material-icon-theme"
 vscode "platformio.platformio-ide"
 vscode "redhat.java"
 vscode "ritwickdey.live-sass"
-vscode "ritwickdey.LiveServer"
+vscode "ritwickdey.liveserver"
 vscode "rodrigovallades.es7-react-js-snippets"
-vscode "TabNine.tabnine-vscode"
-vscode "Tobiah.unity-tools"
+vscode "tabnine.tabnine-vscode"
+vscode "tobiah.unity-tools"
 vscode "tomoki1207.pdf"
-vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
-vscode "VisualStudioExptTeam.vscodeintellicode"
+vscode "visualstudioexptteam.intellicode-api-usage-examples"
+vscode "visualstudioexptteam.vscodeintellicode"
 vscode "vscjava.vscode-java-debug"
 vscode "vscjava.vscode-java-dependency"
 vscode "vscjava.vscode-java-pack"
 vscode "vscjava.vscode-java-test"
 vscode "vscjava.vscode-maven"
 vscode "vscode-icons-team.vscode-icons"
-vscode "WakaTime.vscode-wakatime"
+vscode "wakatime.vscode-wakatime"
 vscode "wayou.vscode-todo-highlight"
 vscode "withfig.fig"
-vscode "YclepticStudios.unity-snippets"
+vscode "yclepticstudios.unity-snippets"
 vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
