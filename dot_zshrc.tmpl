@@ -119,5 +119,26 @@ export NVM_DIR="$HOME/.nvm"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# nvim alias
+alias vim=nvim
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+
+
+alias brwe=sl
+alias lg=lazygit
+
+# ls colors
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+alias ll="gls -alG --color=always"
+alias ls="gls --color=always"
+
+# selfstudynotes alias
+alias cheatsheett="open ~/TyporaNotes/Self\ Study\ Note.md"
+
+
