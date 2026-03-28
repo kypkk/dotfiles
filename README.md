@@ -38,7 +38,7 @@ mac-setup/
 ### First-time setup on a new machine
 
 ```bash
-git clone https://github.com/kypkk/mac-setup ~/mac-setup
+git clone git@github.com:kypkk/dotfiles.git ~/mac-setup
 cd ~/mac-setup
 ./install.sh
 ```
