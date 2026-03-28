@@ -22,6 +22,8 @@
         gt = "status";
       };
     };
+
+
   };
 
   programs.delta = {

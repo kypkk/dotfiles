@@ -13,5 +13,86 @@
     lsd
     zsh-powerlevel10k
     nerd-fonts.jetbrains-mono
+    fastfetch
+
+    # CLI tools
+    bat
+    fd
+    jq
+    yq
+    wget
+    tree
+    tldr
+    ripgrep
+    ncdu
+    httpie
+    shellcheck
+    entr
+    pv
+    rlwrap
+    socat
+    ouch
+    magic-wormhole
+    jc
+    diff-so-fancy
+    asciinema
+
+    # Git
+    git-lfs
+    gitleaks
+    tig
+
+    # System monitoring
+    htop
+    gotop
+    viddy
+    procs
+
+    # Media
+    ffmpeg
+    imagemagick
+    tesseract
+    yt-dlp
+
+    # Cloud & infra
+    awscli2
+    azure-cli
+    terraform
+    kubectl
+    kubernetes-helm
+    k9s
+    kubectx
+    kustomize
+    minikube
+
+    # Build tools
+    cmake
+    ninja
+    gradle
+    maven
+
+    # Network
+    nmap
+    mtr
+    iperf3
+    mosh
+    gnupg
+
+    # Fun/terminal
+    cmatrix
+    lolcat
+    sl
+    cowsay
+    toilet
+
+    # Misc
+    mas
+    hugo
+    pandoc
+    graphviz
+    yamllint
+    sqlmap
+    gnused
+    gnutar
   ];
 }

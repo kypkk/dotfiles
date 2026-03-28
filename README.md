@@ -1,70 +1,140 @@
-# kypkk's dotfiles
+# mac-setup
 
-These dotfiles are managed using [chezmoi](https://www.chezmoi.io/).
+Declarative macOS system configuration using Nix Flakes, nix-darwin, and home-manager for an Apple Silicon MacBook Pro.
 
+## Overview
 
-## What I use
+This repository manages the entire system configuration for a macOS development environment in a reproducible, declarative way:
 
-| Tools             | Description                                                                                         |
-| ----------------- | --------------------------------------------------------------------------------------------------- |
-| Terminal emulator | [iTerm2](https://iterm2.com/) |
-| Package manager   | [Homebrew](https://brew.sh/)                                                                        |
-| Unix shell        | [Z shell](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)                                   |
-| Zsh theme         | [Powerlevel10k](https://github.com/romkatv/powerlevel10k)                                           |
-| Dotfiles manager  | [chezmoi](https://chezmoi.io/)                                                                      |
+- **[Nix Flakes](https://nixos.wiki/wiki/Flakes)** — Reproducible, locked dependency management
+- **[nix-darwin](https://github.com/LnL7/nix-darwin)** — macOS system settings and configuration
+- **[home-manager](https://github.com/nix-community/home-manager)** — User-level dotfiles and program configuration
+- **Homebrew** — GUI applications and macOS-specific casks
 
-## Getting started
+## Structure
 
-Check out the [Quick Start](https://www.chezmoi.io/quick-start/) page.
-
-### Install chezmoi and the dotfiles on any new machine
-
-With a single command:
-
-```sh
-sh -c "$(curl -fsLS chezmoi.io/get)" -- init --apply kypkk
+```
+mac-setup/
+├── flake.nix                    # Flake entrypoint — inputs & outputs
+├── home/                        # home-manager configuration
+│   ├── default.nix              # Imports all program modules
+│   ├── programs/                # Per-program configuration
+├── hosts/
+│   └── MacbookProKypkk/         # Host-specific configuration
+│       ├── default.nix
+|       └── config/
+|           ├── system.nix       # macOS system settings & fonts
+|           ├── nix.nix          # Nix daemon & experimental features
+|           └── homebrew.nix     # Homebrew casks & packages
 ```
 
-### Update
+## Prerequisites
 
-On any machine, you can pull and apply the latest changes from your repo with:
+- macOS on Apple Silicon (aarch64-darwin)
+- Xcode Command Line Tools: `xcode-select --install`
 
-```sh
-chezmoi update -v
+## Usage
+
+### First-time setup on a new machine
+
+```bash
+git clone https://github.com/kypkk/mac-setup ~/mac-setup
+cd ~/mac-setup
+./install.sh
 ```
 
-## Features
+`install.sh` will:
+1. Install [Nix](https://install.determinate.systems/) if not present (flakes enabled by default)
+2. Install [Homebrew](https://brew.sh/) if not present
+3. Detect your hostname and apply the matching flake target
+4. Run `nix run nix-darwin -- switch --flake .#<hostname>`
 
-### Basics
-* zsh, [oh-my-zsh](https://github.com/ohmyzsh) and [p10k](https://github.com/romkatv/powerlevel10k)
-* vim
+### Apply configuration (existing machine)
 
-### Key Mappings (included in [Terminal.itermkeymap](Terminal.itermkeymap)):
+```bash
+darwin-rebuild switch --flake .#kypkk
+```
 
-Using Natural Text Editing preset, and the following [Based on BirkhoffLee's keymap setting](https://github.com/BirkhoffLee/dotfiles/blob/master/Terminal.itermkeymap):
+### Update inputs
 
-| Key     | Send Hex Codes | Description                          |
-| ------- | -------------- | ------------------------------------ |
-| ⌘Z     | `0x1f`       | undo                                 |
-| ⇧⌘Z   | `0x18 0x1f`  | redo                                 |
-| ⌥Del→ | `0x17`       | delete word                          |
-| ⌘←    | `0x2`        | go to beginning of line              |
-| ⇧⌘↵  | `0x1 0x7a`   | maximize pane in current window      |
-| ⌃⌘F   | `0x1 0x2b`   | move pane to new window              |
-| ⇧⌘D   | `0x1 0x2d`   | splits the current pane vertically   |
-| ⌘D     | `0x1 0x5f`   | splits the current pane horizontally |
-| ⇧⌘R   | `0x1 0x72`   | reload tmux config                   |
-| ⇧⌘←  | `0x1 0x68`   | navigate to the pane on the left     |
-| ⇧⌘↓  | `0x1 0x6a`   | navigate to the pane on the bottom   |
-| ⇧⌘↑  | `0x1 0x6b`   | navigate to the pane on the top      |
-| ⇧⌘→  | `0x1 0x6c`   | navigate to the pane on the right    |
-| ⌥⌘←  | `0x1 0x8`    | switch to previous window            |
-| ⌥⌘→  | `0x1 0xc`    | switch to next window                |
+```bash
+nix flake update
+darwin-rebuild switch --flake .#kypkk
+```
 
-## Reference
+### Adding a new machine
 
-[How To Manage Dotfiles With Chezmoi](https://jerrynsh.com/how-to-manage-dotfiles-with-chezmoi/)
+1. Create a new host directory: `hosts/<MachineName>/`
+2. Add a `darwinConfigurations` entry in `flake.nix`
+3. Run `./install.sh` on the new machine
 
-## License
+## What's Configured
 
-This project is released under [The Unlicense](LICENSE).
+### Shell & Terminal
+
+| Tool         | Details                                                                         |
+| ------------ | ------------------------------------------------------------------------------- |
+| **Zsh**      | Powerlevel10k theme, auto-suggestions, syntax highlighting, NVM & Conda support |
+| **Tmux**     | Prefix `Ctrl+S`, Dracula theme, Vim-style navigation, mouse support             |
+| **iTerm2**   | Custom keymap                                                                   |
+| **Neofetch** | Custom system info display                                                      |
+
+### Development Tools
+
+| Category            | Tools                                                                   |
+| ------------------- | ----------------------------------------------------------------------- |
+| **Editors**         | Neovim (NvChad + LSP), Cursor, VS Code, IntelliJ IDEA, PyCharm          |
+| **Version Control** | Git (delta diffs, rebase-pull), GitHub CLI, git-lfs, gitleaks, tig      |
+| **Containers**      | Docker, Orbstack, minikube                                              |
+| **Infrastructure**  | Terraform, kubectl, helm, k9s, kubectx, kustomize                       |
+| **Cloud**           | AWS CLI v2, Azure CLI                                                   |
+| **Languages**       | NVM (Node.js), Conda (Python), Maven/Gradle (Java), CMake/Ninja (C/C++) |
+
+### Neovim (NvChad)
+
+Configured with [NvChad](https://nvchad.com/) framework and Lazy.nvim:
+
+- **LSP**: Mason, nvim-lspconfig, nvim-cmp, LuaSnip
+- **Navigation**: Telescope, nvim-tree, which-key
+- **Syntax**: Treesitter, nvim-colorizer
+- **Git**: Gitsigns
+- **UI**: NvChad base46 themes, indent-blankline, nvim-web-devicons
+
+### CLI Utilities
+
+| Category          | Tools                                         |
+| ----------------- | --------------------------------------------- |
+| **File & Search** | lsd, fd, ripgrep, bat, tree                   |
+| **Data**          | jq, yq, jc, diff-so-fancy                     |
+| **Network**       | nmap, mtr, iperf3, mosh, ngrok                |
+| **Media**         | ffmpeg, ImageMagick, yt-dlp, tesseract        |
+| **System**        | htop, gotop, procs, ncdu, viddy               |
+| **Security**      | GnuPG, sqlmap                                 |
+| **Misc**          | pandoc, hugo, asciinema, magic-wormhole, ouch |
+
+### GUI Applications (Homebrew)
+
+| Category          | Apps                                                       |
+| ----------------- | ---------------------------------------------------------- |
+| **Browsers**      | Arc, Google Chrome, Microsoft Edge                         |
+| **Communication** | Discord, WhatsApp, Zoom                                    |
+| **AI**            | Claude, ChatGPT                                            |
+| **Data & Design** | Figma, Heptabase, TradingView, PopSQL, Azure Data Studio   |
+| **Media**         | IINA, Dropbox                                              |
+| **Utilities**     | Raycast, Ghostty, Typora, Wireshark, DeepL, The Unarchiver |
+| **API**           | Postman                                                    |
+
+### Fonts
+
+- JetBrains Mono Nerd Font
+- Hack Nerd Font
+- Fira Code Nerd Font
+
+## Host
+
+| Key      | Value                            |
+| -------- | -------------------------------- |
+| Hostname | `kypkk`                          |
+| User     | `kangkang`                       |
+| Platform | `aarch64-darwin` (Apple Silicon) |
+| Home     | `/Users/kangkang`                |

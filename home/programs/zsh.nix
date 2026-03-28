@@ -30,21 +30,8 @@
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
       [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
-      # -------- Conda (externally managed, NOT by Nix) --------
+      # -------- Conda --------
       export CONDA_HOME="/opt/homebrew/Caskroom/miniconda/base"
-      if [ -x "$CONDA_HOME/bin/conda" ]; then
-        __conda_setup="$("$CONDA_HOME/bin/conda" shell.zsh hook 2> /dev/null)"
-        if [ $? -eq 0 ]; then
-          eval "$__conda_setup"
-        else
-          export PATH="$CONDA_HOME/bin:$PATH"
-        fi
-        unset __conda_setup
-      fi
-
-      # -------- Conda (brew installed) --------
-      export CONDA_HOME="/opt/homebrew/Caskroom/miniconda/base"
-
       if [ -x "$CONDA_HOME/bin/conda" ]; then
         __conda_setup="$("$CONDA_HOME/bin/conda" shell.zsh hook 2> /dev/null)"
         if [ $? -eq 0 ]; then

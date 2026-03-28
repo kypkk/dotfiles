@@ -20,8 +20,14 @@
   {
     darwinConfigurations.${hostname} = nix-darwin.lib.darwinSystem {
       inherit system;
+      specialArgs = {
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
       modules = [
-        ./hosts/MacbookProKypkk/configuration.nix
+        ./hosts/MacbookProKypkk/default.nix
 
         home-manager.darwinModules.home-manager
         {
