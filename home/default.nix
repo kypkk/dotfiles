@@ -1,4 +1,4 @@
-{ ... }:
+{ isDarwin, lib, ... }:
 
 {
   imports = [
@@ -9,8 +9,9 @@
     ./programs/tmux.nix
     ./programs/nvim.nix
     ./programs/neofetch.nix
-    ./programs/iterm.nix
     ./programs/user-packages.nix
+  ] ++ lib.optionals isDarwin [
+    ./programs/iterm.nix
   ];
 
   home.stateVersion = "25.05";

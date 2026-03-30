@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   home.sessionVariables = {
@@ -86,13 +86,16 @@
     toilet
 
     # Misc
-    mas
     hugo
     pandoc
     graphviz
     yamllint
     sqlmap
-    gnused
-    gnutar
+  ] ++ lib.optionals pkgs.stdenv.isDarwin [
+    mas      # Mac App Store CLI — macOS only
+    gnused   # Linux already ships GNU sed
+    gnutar   # Linux already ships GNU tar
+  ] ++ lib.optionals pkgs.stdenv.isLinux [
+    xclip    # clipboard support on Linux
   ];
 }
