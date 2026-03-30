@@ -17,7 +17,7 @@
       "cursor"
       "deepl"
       "discord"
-      "docker"
+      "docker-desktop"
       "dropbox"
       "figma"
       "ghostty"
@@ -36,11 +36,12 @@
       "raycast"
       "sublime-text"
       "the-unarchiver"
+      "utm"
       "tradingview"
       "typora"
       "visual-studio-code"
       "whatsapp"
-      "wireshark"
+      "wireshark-app"
       "zoom"
     ];
   };
