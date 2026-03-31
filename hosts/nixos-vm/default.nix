@@ -11,6 +11,13 @@
   networking.hostName = "nixos-vm";
   networking.networkmanager.enable = true;
   networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 22 ];
+
+  # SSH
+  services.openssh = {
+    enable = true;
+    settings.PasswordAuthentication = true;
+  };
 
   # User
   users.users.${username} = {
