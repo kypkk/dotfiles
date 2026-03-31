@@ -19,11 +19,15 @@
     settings.PasswordAuthentication = true;
   };
 
+  # Zsh system-wide (required for it to be a valid login shell)
+  programs.zsh.enable = true;
+
   # User
   users.users.${username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     initialPassword = "changeme";
+    shell = pkgs.zsh;
   };
 
   environment.systemPackages = with pkgs; [
