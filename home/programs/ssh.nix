@@ -15,6 +15,12 @@
         user = "git";
         identityFile = "~/.ssh/id_rsa";
       };
+
+      "nixos-vm" = {
+        hostname = "10.211.55.4";
+        user = "kangkang";
+        setEnv = { TERM = "xterm-256color"; };
+      };
     };
   };
 }
