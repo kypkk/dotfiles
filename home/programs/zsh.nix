@@ -55,5 +55,6 @@
     '';
   };
 
-  home.file.".p10k.zsh".source = ../p10k.zsh;
+  home.file.".p10k.zsh".source =
+    if pkgs.stdenv.isDarwin then ../p10k.zsh else ../p10k-nixos.zsh;
 }
