@@ -7,6 +7,20 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "sudo"          # press ESC twice to prepend sudo to last command
+        "docker"
+        "kubectl"
+        "z"             # jump to frecent directories: z myproject
+        "history"       # better history search shortcuts
+        "colored-man-pages"
+        "command-not-found"
+      ];
+    };
+
     shellAliases = {
       vim = "nvim";
       lg = "lazygit";

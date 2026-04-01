@@ -14,6 +14,7 @@
     zsh-powerlevel10k
     nerd-fonts.jetbrains-mono
     fastfetch
+    claude-code
 
     # CLI tools
     bat
