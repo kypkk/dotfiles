@@ -8,7 +8,9 @@
       autoUpdate = true;
       cleanup = "none";
     };
-
+    brews = [
+      "nvm"
+    ];
     casks = [
       "arc"
       "azure-data-studio"

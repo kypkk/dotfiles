@@ -92,6 +92,9 @@
     graphviz
     yamllint
     sqlmap
+
+    # Node.js
+    bun
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     mas      # Mac App Store CLI — macOS only
     gnused   # Linux already ships GNU sed
