@@ -35,6 +35,9 @@
       ${pkgs.lib.optionalString pkgs.stdenv.isDarwin ''
         # -------- Homebrew --------
         eval "$(/opt/homebrew/bin/brew shellenv)"
+
+        # -------- Mise --------
+        eval "$(mise env zsh)"
       ''}
 
       # -------- Powerlevel10k instant prompt --------
