@@ -29,7 +29,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { isDarwin = true; };
+            home-manager.extraSpecialArgs = { isDarwin = true; isServer = false; };
             home-manager.users.${username} = import ./home/default.nix;
           }
         ];
@@ -45,7 +45,7 @@
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.extraSpecialArgs = { isDarwin = false; };
+            home-manager.extraSpecialArgs = { isDarwin = false; isServer = false; };
             home-manager.users.${username} = import ./home/default.nix;
           }
         ];
