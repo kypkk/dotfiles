@@ -43,6 +43,21 @@
       wvous-tr-corner = 11;   # top-right    → Launchpad
       wvous-bl-corner = 4;    # bottom-left  → Desktop
       wvous-br-corner = 14;   # bottom-right → Quick Note
+
+      persistent-apps = [
+        "/Applications/Arc.app"
+        "/Applications/Typora.app"
+        "/Applications/ChatGPT.app"
+        "/Applications/Claude.app"
+        "/Applications/Cursor.app"
+        "/System/Applications/Mail.app"
+        "/Applications/Ghostty.app"
+        "/System/Applications/Photos.app"
+        "/System/Applications/Reminders.app"
+        "/System/Applications/System Settings.app"
+        "/System/Applications/Music.app"
+        "/System/Applications/App Store.app"
+      ];
     };
 
     finder = {
