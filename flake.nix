@@ -50,6 +50,19 @@
           }
         ];
       };
+
+    mkHome = { user, homeDir, system ? "x86_64-linux" }:
+      home-manager.lib.homeManagerConfiguration {
+        pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
+        extraSpecialArgs = { isDarwin = false; isServer = true; };
+        modules = [
+          ./home/default.nix
+          {
+            home.username = user;
+            home.homeDirectory = homeDir;
+          }
+        ];
+      };
   in
   {
     darwinConfigurations = {
@@ -63,6 +76,14 @@
       nixos-vm = mkNixos {
         hostname = "nixos-vm";
         hostModules = [ ./hosts/nixos-vm/default.nix ];
+      };
+    };
+
+    homeConfigurations = {
+      "ubuntu@ec2" = mkHome {
+        user = "ubuntu";
+        homeDir = "/home/ubuntu";
+        system = "x86_64-linux";
       };
     };
   };

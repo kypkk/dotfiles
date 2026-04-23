@@ -10,6 +10,8 @@
     };
     brews = [
       "nvm"
+      "go"
+      "mise"
     ];
     casks = [
       "arc"
@@ -31,6 +33,7 @@
       "microsoft-edge"
       "miniconda"
       "ngrok"
+      "notion"
       "orbstack"
       "postman"
       "popsql"

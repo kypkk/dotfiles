@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, isServer ? false, lib, ... }:
 
 {
   programs.zsh = {
@@ -22,13 +22,13 @@
     };
 
     shellAliases = {
-      vim = "nvim";
       lg = "lazygit";
       ls = "lsd";
       la = "lsd -a";
       ll = "lsd -l";
-
       gst = "git status";
+    } // lib.optionalAttrs (!isServer) {
+      vim = "nvim";
     };
 
     initContent = ''
