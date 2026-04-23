@@ -10,6 +10,7 @@
     ./programs/nvim.nix
     ./programs/neofetch.nix
     ./programs/user-packages.nix
+    ./programs/fastfetch.nix
   ] ++ lib.optionals isDarwin [
     ./programs/iterm.nix
   ];

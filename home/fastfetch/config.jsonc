@@ -1,0 +1,43 @@
+{
+  "logo": {
+    "source": "~/.config/fastfetch/logo.txt",
+    "type": "file"
+  },
+  "modules": [
+    "title",
+    "separator",
+    "datetime",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "packages",
+    "shell",
+    "display",
+    "de",
+    "wm",
+    "terminal",
+    "terminalfont",
+    "font",
+    "cursor",
+    "cpu",
+    "cpucache",
+    "cpuusage",
+    "gpu",
+    "memory",
+    "disk",
+    "battery",
+    "poweradapter",
+    "locale",
+    "wifi",
+    "localip",
+    "publicip",
+    "bluetooth",
+    "camera",
+    "media",
+    "processes",
+    "loadavg",
+    "break",
+    "colors"
+  ]
+}
