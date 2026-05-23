@@ -55,9 +55,13 @@
     tesseract
     yt-dlp
 
+    # Database
+    postgresql
+
     # Cloud & infra
     awscli2
     azure-cli
+    google-cloud-sdk
     terraform
     kubectl
     kubernetes-helm
@@ -95,6 +99,9 @@
 
     # Node.js
     bun
+
+    # Python
+    uv
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     mas      # Mac App Store CLI — macOS only
     gnused   # Linux already ships GNU sed
