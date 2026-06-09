@@ -10,8 +10,11 @@
     };
     brews = [
       "nvm"
+      "ast-grep"
       "go"
       "mise"
+      "libolm"
+      "ttyd"
     ];
     casks = [
       "arc"

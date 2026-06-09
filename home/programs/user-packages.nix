@@ -70,6 +70,10 @@
     kustomize
     minikube
 
+    # Go
+    go-task        # task runner (binary: `task`)
+    golangci-lint  # Go linters aggregator
+
     # Build tools
     cmake
     ninja
