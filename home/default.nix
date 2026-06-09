@@ -11,6 +11,7 @@
     ./programs/neofetch.nix
     ./programs/user-packages.nix
     ./programs/fastfetch.nix
+    ./programs/claude.nix
   ] ++ lib.optionals isDarwin [
     ./programs/iterm.nix
   ];
