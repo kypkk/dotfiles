@@ -7,7 +7,7 @@
     onActivation = {
       autoUpdate = true;
       upgrade = true;
-      cleanup = "uninstalled";
+      cleanup = "uninstall";
     };
     brews = [
       "nvm"
