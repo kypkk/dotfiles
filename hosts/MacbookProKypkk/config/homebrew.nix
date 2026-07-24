@@ -6,7 +6,8 @@
 
     onActivation = {
       autoUpdate = true;
-      cleanup = "none";
+      upgrade = true;
+      cleanup = "uninstalled";
     };
     brews = [
       "nvm"
@@ -37,6 +38,7 @@
       "miniconda"
       "ngrok"
       "notion"
+      "ollama"
       "orbstack"
       "postman"
       "popsql"
