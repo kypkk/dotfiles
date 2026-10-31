@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, isServer ? false, ... }:
 
 {
   home.sessionVariables = {
@@ -14,7 +14,6 @@
     zsh-powerlevel10k
     nerd-fonts.jetbrains-mono
     fastfetch
-    claude-code
 
     # CLI tools
     bat
@@ -49,6 +48,19 @@
     viddy
     procs
 
+    # Network
+    nmap
+    mtr
+    iperf3
+    mosh
+    gnupg
+
+    # Python
+    uv
+  ] ++ lib.optionals (!isServer) [
+    # Dev machine only — heavy to compile on ARM/server
+    claude-code
+
     # Media
     ffmpeg
     imagemagick
@@ -71,21 +83,14 @@
     minikube
 
     # Go
-    go-task        # task runner (binary: `task`)
-    golangci-lint  # Go linters aggregator
+    go-task
+    golangci-lint
 
     # Build tools
     cmake
     ninja
     gradle
     maven
-
-    # Network
-    nmap
-    mtr
-    iperf3
-    mosh
-    gnupg
 
     # Fun/terminal
     cmatrix
@@ -103,9 +108,6 @@
 
     # Node.js
     bun
-
-    # Python
-    uv
   ] ++ lib.optionals pkgs.stdenv.isDarwin [
     mas      # Mac App Store CLI — macOS only
     gnused   # Linux already ships GNU sed

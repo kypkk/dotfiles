@@ -90,7 +90,6 @@
         user = "kypkk";
         homeDir = "/home/kypkk";
         system = "aarch64-linux";
-        isServer = false;
       };
     };
   };
