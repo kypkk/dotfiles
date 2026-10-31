@@ -18,7 +18,6 @@
       "ttyd"
     ];
     casks = [
-      "arc"
       "azure-data-studio"
       "chatgpt"
       "claude"
