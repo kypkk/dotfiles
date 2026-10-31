@@ -85,6 +85,12 @@
         homeDir = "/home/ubuntu";
         system = "x86_64-linux";
       };
+
+      "kypkk@pi" = mkHome {
+        user = "kypkk";
+        homeDir = "/home/kypkk";
+        system = "aarch64-linux";
+      };
     };
   };
 }
