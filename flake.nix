@@ -51,10 +51,10 @@
         ];
       };
 
-    mkHome = { user, homeDir, system ? "x86_64-linux" }:
+    mkHome = { user, homeDir, system ? "x86_64-linux", isServer ? true }:
       home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; config.allowUnfree = true; };
-        extraSpecialArgs = { isDarwin = false; isServer = true; };
+        extraSpecialArgs = { isDarwin = false; inherit isServer; };
         modules = [
           ./home/default.nix
           {
@@ -90,6 +90,7 @@
         user = "kypkk";
         homeDir = "/home/kypkk";
         system = "aarch64-linux";
+        isServer = false;
       };
     };
   };
