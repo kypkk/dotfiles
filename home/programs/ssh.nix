@@ -21,6 +21,12 @@
         user = "kangkang";
         setEnv = { TERM = "xterm-256color"; };
       };
+
+      "pi" = {
+        hostname = "192.168.1.75";
+        user = "kypkk";
+        setEnv = { TERM = "xterm-256color"; };
+      };
     };
   };
 }
