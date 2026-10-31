@@ -23,7 +23,7 @@
       };
 
       "pi" = {
-        hostname = "192.168.1.75";
+        hostname = "100.115.117.19";
         user = "kypkk";
         setEnv = { TERM = "xterm-256color"; };
       };

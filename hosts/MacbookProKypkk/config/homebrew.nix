@@ -44,6 +44,7 @@
       "raycast"
       "sublime-text"
       "tradingview"
+      "tailscale-app"
       "typora"
       "visual-studio-code"
       "wireshark-app"
