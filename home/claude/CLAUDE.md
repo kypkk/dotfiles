@@ -23,7 +23,7 @@ darwin-rebuild switch --flake ~/nix-config#kypkk
 ### Machine info
 - **MacBook Pro** — `aarch64-darwin`, flake target `darwinConfigurations.kypkk`
 - **NixOS VM** — `aarch64-linux` (Parallels), flake target `nixosConfigurations.nixos-vm`
-- **EC2 Ubuntu** — `x86_64-linux`, standalone home-manager target `homeConfigurations.ubuntu@ec2`
+- **Raspberry Pi 5** — `aarch64-linux` (Ubuntu), standalone home-manager target `homeConfigurations.kypkk@pi`
 - **Repo**: `~/nix-config` (remote: `git@github.com:kypkk/dotfiles.git`)
 
 ### Rules for this session

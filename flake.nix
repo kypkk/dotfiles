@@ -80,12 +80,6 @@
     };
 
     homeConfigurations = {
-      "ubuntu@ec2" = mkHome {
-        user = "ubuntu";
-        homeDir = "/home/ubuntu";
-        system = "x86_64-linux";
-      };
-
       "kypkk@pi" = mkHome {
         user = "kypkk";
         homeDir = "/home/kypkk";
