@@ -45,7 +45,7 @@
       wvous-br-corner = 14;   # bottom-right → Quick Note
 
       persistent-apps = [
-        "/Applications/Dia.app"
+        "/Applications/Helium.app"
         "/Applications/Typora.app"
         "/Applications/ChatGPT.app"
         "/Applications/Claude.app"
