@@ -14,6 +14,7 @@
     zsh-powerlevel10k
     nerd-fonts.jetbrains-mono
     fastfetch
+    claude-code
 
     # CLI tools
     bat
@@ -59,8 +60,6 @@
     uv
   ] ++ lib.optionals (!isServer) [
     # Dev machine only — heavy to compile on ARM/server
-    claude-code
-
     # Media
     ffmpeg
     imagemagick
