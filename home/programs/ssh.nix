@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, isServer ? false, ... }:
 
 {
   programs.ssh = {
@@ -13,7 +13,8 @@
 
       "github.com" = {
         user = "git";
-        identityFile = "~/.ssh/id_rsa";
+        # Pi uses its own ed25519 key; Mac and VM keep id_rsa
+        identityFile = if isServer then "~/.ssh/id_ed25519" else "~/.ssh/id_rsa";
       };
 
       "nixos-vm" = {
